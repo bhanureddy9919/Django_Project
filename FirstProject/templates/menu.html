@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .menu {
+        display: none;
+      }
+
+      .show-menu {
+        display: flex;
+        flex-direction: column;
+        background-color: lightgray;
+        width: 200px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .menu-item {
+        padding: 10px;
+        text-align: center;
+      }
+
+      .menu-item:hover {
+        background-color: gray;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="toggle-menu">Toggle Menu</button>
+    <div class="menu">
+      <div class="menu-item">Home</div>
+      <div class="menu-item">About</div>
+      <div class="menu-item">Contact</div>
+    </div>
+    <script>
+      const toggleMenu = document.getElementById("toggle-menu");
+      const menu = document.querySelector(".menu");
+
+      toggleMenu.addEventListener("click", () => {
+        menu.classList.toggle("show-menu");
+      });
+    </script>
+  </body>
+</html>
